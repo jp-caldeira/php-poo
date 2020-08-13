@@ -25,4 +25,23 @@ $victor->recebeValores("Victor", 18, "Masculino");
 $victor->MostraNomePessoa();
 
 
+class Usuario {
+    public $nomeUsuario;
+    public $email;
+    public $senha;
+}
 
+function cadastraUsuario ($nomeUsuario, $email, $senha){
+        $this->nome = $nomeUsuario;
+        $this->email = $email;
+        $this->senha = $senha;
+}
+
+function showUser() {
+    echo "NOME: ", $this->nome, "\n";
+    echo "EMAIL: ", 
+}
+
+
+
+?>

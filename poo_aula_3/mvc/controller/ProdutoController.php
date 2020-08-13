@@ -1,5 +1,5 @@
 <?php
-require 'model/Produto.php';
+require 'model/ProdutoModel.php';
 
 class ProdutoController {
     public function listar() {
@@ -11,6 +11,6 @@ class ProdutoController {
         /**
          * Exiba a lista de produtos
          */
-        require 'view/produto.php';
+        require 'view/produto-view.php';
     }
 }

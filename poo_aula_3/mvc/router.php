@@ -1,9 +1,11 @@
 <?php
 require 'controller/ProdutoController.php';
+require 'controller/LoginController.php';
+require 'controller/UsuariosController.php';
 /**
  * Dicas
  * 1. Criar a rota
- * 2. Criar controller e/ou método ( Você pode ter mais de uma rota ligado ao mesmo controle em métodos diferentes )
+ * 2. Criar controller e/ou método ( Você pode ter mais de uma rota ligado ao mesmo controle em métodos diferentes)
  * 3. Ver ações necessárias pro método ( Se vai utilizar view ou Model )
  * 4. Retornar a View ou Redirecionar o usuário 
  */
@@ -16,7 +18,9 @@ switch ($_SERVER['REQUEST_URI']) {
         /** 
          * Exibe o formulário de login vai precisar de um view e um controlador.
          */
-        echo "Estou no login!";
+        $loginController = new loginController();
+        return $loginController->paginaLogin();
+
     break;
     case '/logar': 
         /** 
@@ -29,6 +33,8 @@ switch ($_SERVER['REQUEST_URI']) {
         /**
          * Precisa de uma listagem de usuários do site, vai precisar de view model e controller
          */
+        $usuarioController = new UsuarioController();
+        return $usuarioController->exibirUsuarios();
         echo "Estou na página da listagem de usuários!";
     break;
 
