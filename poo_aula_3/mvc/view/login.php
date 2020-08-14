@@ -8,17 +8,16 @@
 <body>
 
 <h1>Página de login</h1>
-<form action="login.php" method='post'>
-<label for="name">Nome</label>
-<input type="text">
+<form class="" action="/logar" method="post">
+<label for="email">Email</label>
+  <input type="email" name="email" value="">
 <label for="senha">Senha</label>
-<input type="password">
+  <input type="password" name='senha'>
 <button type='submit'>Enviar</button>
-
-
-
-
 </form>
-    
+<?php if(isset($_SESSION['msgCadastro'])){
+    echo $_SESSION['msgCadastro'];
+    unset($_SESSION['msgCadastro']);
+} ?>
 </body>
 </html>

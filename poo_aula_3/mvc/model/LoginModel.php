@@ -1,25 +1,12 @@
 <?php
 
 class login {
-        public function loginPage(){
-            return [
-                    [
-                    'userName' => "jpcm86",
-                    'email' => "jpcm86@gmail.com",
-                    'senha' => "senha"
-                    ],
-                    [
-                        'userName' => "jpcm86",
-                        'email' => "jpcm86@gmail.com",
-                        'senha' => "senha"
-                    ], 
-                    [
-                        'userName' => "jpcm86",
-                        'email' => "jpcm86@gmail.com",
-                        'senha' => "senha"
-                    ],  
-                    ];         
-            }
+        public function arrayLogin(){
+          $listaLogin = file_get_contents('json/users.json');
+          $listaLogin = json_decode($listaLogin, TRUE);
+          return $listaLogin;          
+          }
+
         }
 
 ?>
